@@ -1,10 +1,11 @@
 import React, { createContext, useReducer, useContext } from "react";
-import axios from "axios";
 import * as api from "./api";
 import createAsyncDispatcher, {
     createAsyncHandler,
     initialAsyncState,
 } from "./asyncActionUtils";
+
+// Context로 비동기 작업을 처리하는 것은 특정 상태가 전역적으로 필요할때만 사용
 
 // UsersContext 에서 사용 할 기본 상태
 const initialState = {
