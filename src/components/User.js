@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { getUser, useUserDispatch, useUsersState } from "../UsersContext";
+import { getUser, useUsersDispatch, useUsersState } from "../UsersContext";
 
 const LoadingBlock = styled.div`
     padding: 32px;
@@ -16,7 +16,7 @@ const StyledUser = styled.div`
 
 function User({ id }) {
     const state = useUsersState();
-    const dispatch = useUserDispatch();
+    const dispatch = useUsersDispatch();
 
     useEffect(() => {
         getUser(dispatch, id);

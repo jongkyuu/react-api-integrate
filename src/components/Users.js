@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import User from "./User";
 import styled from "styled-components";
-import {
-    getUsers,
-    useUserDispatch as useUsersDispatch,
-    useUsersState,
-} from "../UsersContext";
+import { getUsers, useUsersDispatch, useUsersState } from "../UsersContext";
 
 const UsersBlock = styled.div`
     li {
